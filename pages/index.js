@@ -13,10 +13,7 @@ const CHIAN_ID = "pulsar-2";
 
 
 /*
-
-
-
-
+  make images use token name and prefix url before
 */
 export default function Home() {
   const [keplr, setKeplr] = useState(false);
@@ -29,7 +26,6 @@ export default function Home() {
   useEffect(async () => {
     document.title = `You clicked ${owned} times`;
     const sleep = (ms) => new Promise((accept) => setTimeout(accept, ms));
-
     // Wait for Keplr to be injected to the page
     while (
       !window.keplr &&
@@ -184,7 +180,7 @@ async function getOwnedNfts(signing_client, owner) {
             className="w-full " />
           <h1 className="font-bold underline opacity-87 object-contain">      {res.nft_info.name}    </h1>
           <p className='opacity-60'> {descr[1]}</p>
-          <button onClick={async () =>  await sendNft(signing_client, x)}>
+          <button onClick={async () => await sendNft(signing_client, x)}>
             Deposit {x}
           </button>
         </div>

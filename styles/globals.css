@@ -4,6 +4,7 @@
 html,
 body {
   background-color: #121212;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,4 +14,60 @@ a {
 
 * {
   box-sizing: border-box;
+}
+div.relative {
+  position: absolute;
+  background: red;
+  height: 2vw;
+  width: 0.1vw;
+  left: 50vw;
+  margin: 0.1vw;
+  z-index: 1;
+}
+
+div.leftpanel {
+  left: 0vw;
+  height: 3vw;
+  width: 40vw;
+  position: absolute;
+  background: black;
+  z-index: 1;
+}
+div.rightpanel {
+  right: 0vw;
+  height: 3vw;
+  width: 40vw;
+  position: absolute;
+  background: black;
+  z-index: 1;
+}
+div.boxwrapper {
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 200vw;
+  left: -16.3vw;
+  overflow-x: hidden;
+}
+div.thing {
+  animation-duration: 7s;
+  position: relative;
+  animation-name: slidein;
+  height: 2.5vw;
+  width: 2.5vw;
+  background: green;
+  float: left;
+  margin: 0.2vw;
+  left: 50vw;
+  overflow-x: hidden;
+}
+
+@keyframes slidein {
+  from {
+    left: -30vw;
+  }
+
+  to {
+    left: 50vw;
+  }
 }
